@@ -1,0 +1,643 @@
+<html>
+    <head>
+         <meta charset='UTF-8'>
+        <meta name="robots" content="noindex">
+      
+        <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+        <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+        <link rel="canonical" href="https://codepen.io/erajamanickam/pen/YzOjZLa">
+        <link rel="stylesheet" href="style2.css">
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="theme-color" content="linear-gradient(to bottom, #61daff, #656bff)">
+         <meta name="description" content="We will simple add to cart using javascript localstorage">
+         <meta name="keywords" content="add to cart, add to cart javascript, localstorage add to cart, ecommerce shopping javascript, shooping cart demo">
+         <meta name="author" content="Rajamanickam">
+    <link rel="stylesheet" href="sty2.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+        <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
+       <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+       <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+    </head>
+<body>
+<main>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+       <a class="navbar-brand" href="#"><strong>Shoping Cart</strong></a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2" type="search" id="search_field"  placeholder="Search" aria-label="Search">
+          </form>
+          <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal"
+             data-target="#staticBackdrop">
+              <i class="fas fa-shopping-cart total-count"></i>
+          </button>
+       </div>
+    </nav>
+    <section>
+       <div class="featured-area pt-100 pb-70">
+          <div class="container">
+             <div class="tab featured-tab-area">
+                <div class="row justify-content-center">
+
+                   <div class="col-lg-8 col-md-8">
+                      <ul class="tabs active">
+                         <li class="">
+                            <a href="#">
+                               All
+                            </a>
+                         </li>
+                         <li class="">
+                            <a href="#">
+                              Flowering Plants 
+                            </a>
+                         </li>
+                         <li class="">
+                            <a href="#">
+                              Cactus and Succulents
+                            </a>
+                         </li>
+                         <li class="">
+                            <a href="#">
+                              Lucky Bamboo
+                            </a>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="tab_content current active pt-45">
+                   
+                  <div class="tabs_item current">
+                     <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-jasminum-sambac-mogra-arabian-jasmine_600x600.jpg?v=1634222612" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Jasminum sambac, Mogra, Arabian Jasmine - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 299 </h4>
+                                    <span>(4.9)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Jasminum-sambac" data-price="299" class="default-btn border-radius-5"> Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-peace-lily-spathiphyllum-plant-887951_600x600.jpg?v=1679750814" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Peace Lily, Spathiphyllum - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 359 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Peace-Lily" data-price="359" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-miniature-rose-button-rose-any-color-plant-830854_600x600.jpg?v=1679750627" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Miniature Rose, Button Rose (Any Color) - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 289 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Miniature-Rose" data-price="289" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-top-4-die-hard-succulents-pack-980804_600x600.jpg?v=1679751768" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Top 4 Die Hard Succulents Pack</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 759 </h4>
+                                    <span>(4.9)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Hard-Succulents-Pack" data-price="759" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plant-elephant-bush-portulacaria-afra-jade-green-plant-in-4.5-inch-11-cm-ronda-No-1110-round-plastic-green-planter-558634_600x600.jpg?v=1679749890" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Elephant bush, Portulacaria afra, Jade plant (Green) - Succulent Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 259 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Elephant-bush" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-plants-krishna-tulsi-plant-holy-basil-ocimum-tenuiflorum-black-plant-16968990425228_600x600.jpg?v=1634226020" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                              <p> Krishna Tulsi Plant, Holy Basil, Ocimum tenuiflorum (Black) - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 259 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Krishna-Tulsi-Plant" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-combo-packs-plants-5-best-fragrant-plants-16968509653132_600x600.jpg?v=1634209158" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>5 Best Fragrant Plants</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 1,399 </h4>
+                                    <span>(4.9)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Fragrant-Plants" data-price="1399" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-rosemary-plant-in-5-inch-13-cm-grower-round-plastic-black-pot-602650_600x600.jpg?v=1679751054" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Rosemary - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 249 </h4>
+                                    <span>(4.0)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Rosemary-Plant" data-price="249" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-syngonium-pink-plant_600x600.jpg?v=1635748921" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Syngonium (Pink) - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 259 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Syngonium" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-chlorophytum-spider-plant-plant_6c3477e8-39ca-4d4b-b51a-1f9fb435ac17_600x600.jpg?v=1634216138" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Chlorophytum, Spider Plant - Plant</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 259 </h4>
+                                    <span>(3.9)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Chlorophytum" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-combo-packs-plants-plant-pack-for-healthy-home-office-155522_600x600.jpg?v=1679750881" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Plant Pack For Healthy Home-Officet</p>
+                                 <hr>
+                                 <div class="content-in">
+                                   <h4>₹ 1,059</h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Plant-Pack" data-price="1059" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="featured-item">
+                              <div class="featured-item-img">
+                                 <a href="#">
+                                   <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-combo-packs-plants-pack-of-3-good-luck-jade-plants-in-ceramic-pots-16969154297996_600x600.jpg?v=1634225377" alt="img">
+                                 </a>
+                              </div>
+                              <div class="content">
+                               <p>Pack of 3 Good Luck Jade Plants in Ceramic Pots</p>
+                                 <hr>
+                                 <div class="content-in">
+                                    <h4>₹ 699 </h4>
+                                    <span>(4.4)<i class="fa fa-star"></i></span>
+                                 </div>
+                                 <hr>
+                                 <div class="featured-content-list">
+                                    <button type="button" data-name="Good-Luck-Jade-Plants" data-price="699" class="default-btn border-radius-5">Add to cart</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                   <div class="tabs_item">
+                      <div class="row justify-content-center">
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-anthurium-red-plant_600x600.jpg?v=1635939352" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Anthurium (Red) - Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 859  </h4>
+                                     <span>(4.9)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Anthurium(Red)" data-price="859" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-bougainvillea-pink-plant_600x600.jpg?v=1634214812" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Bougainvillea (Pink) - Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 359  </h4>
+                                     <span>(4.9)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Bougainvillea(Pink)" data-price="359" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-plants-adenium-plant-desert-rose-pink-plant-16968550383756_600x600.jpg?v=1634211571g" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Attractive Adenium Bonsai for Amazing Father </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 659</h4>
+                                     <span>(4.9)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Adenium-Bonsai" data-price="659" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-dahlia-red-plant_600x600.jpg?v=1634217586" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Dahlia (Red) - Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4> ₹ 199  </h4>
+                                     <span>(3.9)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Dahlia(Red)" data-price="199" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="tabs_item">
+                      <div class="row justify-content-center">
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-senecio-serpens-succulent-plant_9ac6df2b-174a-41df-9150-4b3851179bb3-164766_600x600.jpg?v=1679751300" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Senecio serpens - Succulent Plant  </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 259  </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Senecio-serpens" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/urserylive-plants-graptoveria-douglas-huth-plant-1_600x600.jpg?v=1634220774" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p> Graptoveria Douglas Huth - Succulent Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 259 </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Graptoveria_Douglas_Huth" data-price="259" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-crassula-surprise-party-succulent-plant_600x600.jpg?v=1634216932" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Crassula Surprise Party - Succulent Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 459  </h4>
+                                     <span>(4.0)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Crassula_Surprise_Party" data-price="459" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-cupid-peperomia-peperomia-scandens-green-succulent-plant_600x600.jpg?v=1636466228" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Cupid Peperomia, Peperomia scandens (Green) - Succulent Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 299 </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Cupid_Peperomia" data-price="299" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="tabs_item">
+                      <div class="row justify-content-center">
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-3-layer-lucky-bamboo-plant-in-a-bowl-with-pebbles-701159_600x600.jpg?v=1679748420" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>3 Layer Lucky Bamboo Plant in a Bowl with Pebbles	</p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 399 </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="3_Layer_Lucky_Bamboo" data-price="399" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-plants-60-cm-spiral-stick-lucky-bamboo-plant-pack-of-3-534707_600x600.jpg?v=1679748308" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>60 cm Spiral Stick Lucky Bamboo Plant - (Pack of 3)  </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 999  </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="60_cm_Spiral_Stick" data-price="999" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-g-multidrop-lotus-tiger-sticks-lucky-bamboo-plant-672325_600x600.jpg?v=1679750637" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>Multidrop Lotus Tiger Sticks Lucky Bamboo - Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 559 </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="Multidrop_Lotus" data-price="559" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6">
+                            <div class="featured-item">
+                               <div class="featured-item-img">
+                                  <a href="#">
+                                     <img src="https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-plants-1-lucky-bamboo-stalk-a-symbol-of-commitment-gift-plant-16968367440012_600x600.jpg?v=1634202788" alt="Images">
+                                  </a>
+                               </div>
+                               <div class="content">
+                                  <p>1 Lucky Bamboo Stalk (A Symbol of Commitment) - Gift Plant </p>
+                                  <hr>
+                                  <div class="content-in">
+                                     <h4>₹ 299  </h4>
+                                     <span>(4.4)<i class="fa fa-star"></i></span>
+                                  </div>
+                                  <hr>
+                                  <div class="featured-content-list">
+                                     <button type="button" data-name="1_Lucky_Bamboo_Stalk" data-price="299" class="default-btn border-radius-5">Add to cart</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <p id="not_found"></p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+       <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                </button>
+             </div>
+             <div class="modal-body">
+                <table class="show-cart table">
+      
+                </table>
+                <div class="grand-total">Total price: ₹<span class="total-cart"></span></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="signup.html"><button type="button" class="btn btn-secondary" >Buy Now</button></a>
+                <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+                    <div class="row">
+                        <div class="col">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+                    </div>
+                </nav>              </div>
+          </div>
+       </div>
+    </div>
+ </main>
+ <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-064f34d5-30f0-e02b-7fbc-44bbaf01c47f" crossorigin></script>
+  <script src="scr2.js"></script>
+ </body>
+</html>
